@@ -1,4 +1,3 @@
-import napari.types
 from napari_plugin_engine import napari_hook_implementation
 from napari_time_slicer import time_slicer
 from napari_tools_menu import register_function
