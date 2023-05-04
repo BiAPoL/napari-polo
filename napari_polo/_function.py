@@ -12,7 +12,7 @@ def napari_experimental_provide_function():
 @time_slicer
 def generate_clean_orientation_image(raw_orientation_image: 'napari.types.ImageData', step_size: int = 10,
                                      erosion_footprint_width: int = 3) -> 'napari.types.LabelsData':
-    from .utilities import prepro_orientation
+    from ._utilities import prepro_orientation
     from ._core_functions import percentile_pairs, filter_arr_vals, label_expansion
 
     normalized_image = prepro_orientation([raw_orientation_image])[0]
