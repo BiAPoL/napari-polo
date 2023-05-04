@@ -1,11 +1,6 @@
 from napari_plugin_engine import napari_hook_implementation
-from napari_tools_menu import register_function
 from napari_time_slicer import time_slicer
-
-
-@napari_hook_implementation
-def napari_experimental_provide_function():
-    return [generate_clean_orientation_image]
+from napari_tools_menu import register_function
 
 
 @register_function(menu="Segmentation / labeling > Generate clean labeled orientation image")
@@ -24,3 +19,8 @@ def generate_clean_orientation_image(raw_orientation_image: 'napari.types.ImageD
     labeled_images, counts = label_expansion(filtered_images, noise_se_size=erosion_footprint_width)
 
     return labeled_images.astype(int)
+
+
+@napari_hook_implementation
+def napari_experimental_provide_function():
+    return [generate_clean_orientation_image]
