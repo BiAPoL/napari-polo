@@ -204,7 +204,7 @@ def mask_adj_obj(arr, labeled_arr):
 
 # ---------------------------------------------------------
 
-def orientation_angles(indexed_arr):
+def generate_orientation_angles(indexed_arr):
     """...
 
     Parameters:
