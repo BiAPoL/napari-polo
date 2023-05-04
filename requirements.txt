@@ -1,0 +1,7 @@
+napari-plugin-engine>=0.1.4
+numpy
+napari-tools-menu
+napari-time-slicer
+
+# TODO: Make sure that these packages exist on https://pypi.org or update the list
+pyclesperanto-prototype>=0.24.1
